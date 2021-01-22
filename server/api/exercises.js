@@ -11,6 +11,15 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+// router.post('/:exerciseId', async (req, res, next) => {
+//   try {
+//     const exercises = await Exercises.findByPk()
+//     res.json(exercises)
+//   } catch (err) {
+//     next(err)
+//   }
+// })
+
 //get route
 //post will create or update
 //delete route
