@@ -6,7 +6,6 @@ import {Login, Signup, UserHome} from './components'
 import Blog from './components/Blog'
 import Welcome from './components/Welcome'
 import ExerciseLib from './components/ExerciseLib'
-import WorkoutHistory from './components/WorkoutHistory'
 import TodaysPlan from './components/TodaysPlan'
 import {me} from './store'
 
@@ -28,13 +27,12 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/exerciselibrary" component={ExerciseLib} />
-        <Route path="/dailyplan" component={TodaysPlan} />
-        <Route path="/blog" component={Blog} />
+        {/* <Route path="/blog" component={Blog} /> */}
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            {/* <Route path="/home" component={Blog} /> */}
-            <Route path="/workouthistory" component={WorkoutHistory} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/dailyplan" component={TodaysPlan} />
           </Switch>
         )}
         {/* Displays welcome component as a fallback */}

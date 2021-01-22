@@ -15,8 +15,6 @@ const NavigationBar = ({handleClick, isLoggedIn}) => (
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Link to="/exerciselibrary">Exercise Library</Link>
-          <Link to="/dailyplan">Go Time!</Link>
-          <Link to="/blog">Blog</Link>
         </Nav>
         <Nav>
           <nav>
@@ -26,9 +24,8 @@ const NavigationBar = ({handleClick, isLoggedIn}) => (
                 <Link to="/home" className="nav-links">
                   Home
                 </Link>
-                <Link to="/workouthistory" className="nav-links">
-                  Previous Workouts
-                </Link>
+                <Link to="/dailyplan">Go Time!</Link>
+                <Link to="/blog">Blog</Link>
                 <a href="#" onClick={handleClick} className="nav-links">
                   Logout
                 </a>
