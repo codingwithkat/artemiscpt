@@ -8,7 +8,7 @@ import {Navbar, Nav} from 'react-bootstrap'
 const NavigationBar = ({handleClick, isLoggedIn}) => (
   <div>
     <Navbar className="nav-bar" collapseOnSelect expand="lg" variant="dark">
-      <Navbar.Brand className="brand-name" href="/">
+      <Navbar.Brand className="brand-name" href="/home">
         Artemis Training
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
