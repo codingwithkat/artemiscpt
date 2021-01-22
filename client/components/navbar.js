@@ -3,28 +3,50 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
+import {Navbar, Nav} from 'react-bootstrap'
 
-const Navbar = ({handleClick, isLoggedIn}) => (
+const NavigationBar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-    </nav>
-    <hr />
+    <Navbar className="nav-bar" collapseOnSelect expand="lg" variant="dark">
+      <Navbar.Brand className="brand-name" href="/">
+        Artemis Training
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Link to="/exerciselibrary">Exercise Library</Link>
+          <Link to="/blog">Blog</Link>
+        </Nav>
+        <Nav>
+          <nav>
+            {isLoggedIn ? (
+              <div>
+                {/* The navbar will show these links after you log in */}
+                <Link to="/home" className="nav-links">
+                  Home
+                </Link>
+                <Link to="/workouthistory" className="nav-links">
+                  Previous Workouts
+                </Link>
+                <a href="#" onClick={handleClick} className="nav-links">
+                  Logout
+                </a>
+              </div>
+            ) : (
+              <div>
+                {/* The navbar will show these links before you log in */}
+                <Link to="/login" className="nav-links">
+                  Login
+                </Link>
+                <Link to="/signup" className="nav-links">
+                  Sign Up
+                </Link>
+              </div>
+            )}
+          </nav>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   </div>
 )
 
@@ -45,7 +67,7 @@ const mapDispatch = dispatch => {
   }
 }
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(mapState, mapDispatch)(NavigationBar)
 
 /**
  * PROP TYPES
