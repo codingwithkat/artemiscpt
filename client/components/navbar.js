@@ -15,6 +15,7 @@ const NavigationBar = ({handleClick, isLoggedIn}) => (
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Link to="/exerciselibrary">Exercise Library</Link>
+          <Link to="/dailyplan">Go Time!</Link>
           <Link to="/blog">Blog</Link>
         </Nav>
         <Nav>

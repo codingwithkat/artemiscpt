@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchExercises} from '../store/exercises'
+import {Button} from 'react-bootstrap'
 
 class ExerciseLab extends React.Component {
   constructor(props) {
@@ -12,18 +13,26 @@ class ExerciseLab extends React.Component {
   }
 
   render() {
-    // console.log('this.props', this.props)
-    // console.log('this.props.exercises', this.props.exercises) empty array at 1st
     return (
       <div>
-        <h1>Exercises</h1>
+        <h1 className="library-header">Build Today's Workout</h1>
+        <h4 className="library-info">
+          Select as many exercises to build yourself a personalized workout
+          plan!
+        </h4>
         {this.props.exercises.map(exercise => (
-          <div key={exercise.id}>
-            <ul>
+          <div className="all-exercises-container" key={exercise.id}>
+            <ul className="all-exercises">
               <li>Exercise Name: {exercise.name}</li>
               <li>Muscle Group: {exercise.type}</li>
-              <li>Sets: {exercise.sets}</li>
+              <li>Set(s): {exercise.sets}</li>
               <li>Reps: {exercise.repetitions}</li>
+              <li>Video: {exercise.video}</li>
+              <Button className="add-exercise" type="submit">
+                Add
+              </Button>
+              {/* <img src={exercise.video}
+                style={{width: '25%', margin: '20px 0'}}/> */}
             </ul>
           </div>
         ))}

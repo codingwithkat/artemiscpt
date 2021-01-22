@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: grey;
+  background-color: #ffffff;
 }
 
 a {
@@ -14,7 +14,7 @@ label {
 nav a {
   display: inline-block;
   margin: 1em;
-  color: #ffffff;
+  color: gold;
 }
 
 .nav-bar {
@@ -26,6 +26,33 @@ form div {
   display: inline-block;
 }
 
-.brand-name {
-  color: #000000;
+/* Exercise Library */
+
+.library-header {
+  padding-top: 5px;
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.library-info {
+  text-align: center;
+  font-size: 16px;
+}
+
+.all-exercises {
+  padding: 0;
+  padding-left: 10px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.all-exercises-container {
+  width: 350px;
+  height: 400px;
+  background-color: gold;
+  float: left;
+  margin: 30px;
+  padding: 5px;
+  word-wrap: break-word;
 }

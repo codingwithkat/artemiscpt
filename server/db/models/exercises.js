@@ -13,6 +13,9 @@ const Exercises = db.define('exercise', {
   },
   repetitions: {
     type: Sequelize.INTEGER
+  },
+  video: {
+    type: Sequelize.STRING
   }
 })
 
