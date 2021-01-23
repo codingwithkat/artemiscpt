@@ -18,14 +18,15 @@ export const fetchExercises = () => async dispatch => {
 
 const ADD_EXERCISE = 'ADD_EXERCISE'
 
-export const addExercise = exercise => ({
+export const addExercise = (userId, exerciseId) => ({
   type: ADD_EXERCISE,
-  exercise
+  userId,
+  exerciseId
 })
 
 export const createWorkout = (userId, exerciseId) => async dispatch => {
   try {
-    const {data} = await axios.post('./api/exerciselibrary/:exerciseId', {
+    const {data} = await axios.post('/api/exerciselibrary/:exerciseId', {
       userId,
       exerciseId
     })

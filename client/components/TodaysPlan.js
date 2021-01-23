@@ -1,14 +1,10 @@
 import React from 'react'
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 
 class TodaysPlan extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  async componentDidMount() {
-    await this.props.addExercises()
-  }
+  // async componentDidMount() {
+  //   await this.props.addExercises()
+  // }
 
   render() {
     return (
@@ -19,15 +15,4 @@ class TodaysPlan extends React.Component {
   }
 }
 
-// const mapState = state => {
-//   return {
-
-//   }
-// }
-
-// const mapDispatch = dispatch => {
-//   return {
-//   }
-// }
-
-export default connect(mapState, mapDispatch)(TodaysPlan)
+export default TodaysPlan
