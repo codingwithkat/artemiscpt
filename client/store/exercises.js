@@ -38,8 +38,7 @@ export const createWorkout = (userId, exerciseId) => async dispatch => {
 const initialState = []
 
 export default function exercisesReducer(state = initialState, action) {
-  // console.log('action is:', action)
-  // console.log('what is action.exercise', action.exercise)
+  console.log('action is:', action)
   switch (action.type) {
     case GET_EXERCISES:
       return action.exercises

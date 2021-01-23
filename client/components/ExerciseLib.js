@@ -6,13 +6,13 @@ import {Button} from 'react-bootstrap'
 class ExerciseLab extends React.Component {
   constructor(props) {
     super(props)
-    this.clickAddExercise = this.clickAddExercise.bind(this)
+    // this.clickAddExercise = this.clickAddExercise.bind(this)
   }
 
-  clickAddExercise(exercise) {
-    this.props.addExercise(this.props.userId, exercise.id)
-    // console.log('you clicked the exercise button', exercise.name)
-  }
+  // clickAddExercise(exercise) {
+  //   this.props.addExercise(this.props.userId, exercise.id)
+  //   // console.log('you clicked the exercise button', exercise.name)
+  // }
   async componentDidMount() {
     await this.props.loadExercises()
   }
@@ -37,9 +37,10 @@ class ExerciseLab extends React.Component {
                 className="add-exercise"
                 type="submit"
                 onClick={() => {
-                  this.clickAddExercise(exercise)
-                  console.log('exercise is:', exercise)
-                  // this is good bc on click it will add the object which is that respective exercise
+                  console.log('you click add.....')
+                  console.log('button: userId', this.props.userId)
+                  console.log('button: exercise.id', exercise.id)
+                  this.props.addExercise(this.props.userId, exercise.id)
                 }}
               >
                 Add
@@ -56,15 +57,16 @@ class ExerciseLab extends React.Component {
 
 const mapState = state => {
   return {
+    userId: state.user.id,
     exercises: state.exercises
   }
 }
 
 const mapDispatch = dispatch => {
-  console.log(console.log('dispatch', dispatch))
   return {
     loadExercises: () => dispatch(fetchExercises()),
-    addExercise: exercise => dispatch(createWorkout(exercise))
+    addExercise: (userId, exerciseId) =>
+      dispatch(createWorkout(userId, exerciseId))
   }
 }
 
