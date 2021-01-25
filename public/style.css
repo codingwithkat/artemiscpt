@@ -1,11 +1,15 @@
 body {
   font-family: sans-serif;
-  background-color: #ffffff;
+  background-color: #d5f3fe;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  color: #d5f3fe;
 }
 
 label {
@@ -15,11 +19,11 @@ label {
 nav a {
   display: inline-block;
   margin: 1em;
-  color: gold;
+  color: #ffffff;
 }
 
 .nav-bar {
-  background-color: #000000;
+  background-color: #0f5298;
 }
 
 form div {
@@ -34,11 +38,13 @@ form div {
   text-align: center;
   font-style: italic;
   font-size: 24px;
+  color: #2565ae;
 }
 
 .library-info {
   text-align: center;
   font-size: 16px;
+  color: #2565ae;
 }
 
 .all-exercises {
@@ -77,17 +83,17 @@ form div {
 }
 
 .title {
-  color: #000000;
+  color: #2565ae;
   text-align: center;
 }
 .welcome-note {
-  color: #000000;
+  color: #2565ae;
   text-align: center;
 }
 
 .select-type {
-  width: 120px;
-  height: 30px;
+  width: 180px;
+  height: 45px;
   border: 1px solid #999;
   font-size: 18px;
   color: #000000;
@@ -95,6 +101,13 @@ form div {
   border-radius: 5px;
   box-shadow: 4px 4px #ccc;
 }
+
+.logo,
+select {
+  margin: auto;
+  display: block;
+}
+
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 }
