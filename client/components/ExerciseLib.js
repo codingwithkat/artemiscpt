@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchExercises, createWorkout} from '../store/exercises'
+import {fetchExercises} from '../store/exercises'
+import {addToWorkout} from '../store/workoutHistory'
 import {Button} from 'react-bootstrap'
-// import ReactPlayer from "react-player";
 
 class ExerciseLab extends React.Component {
   constructor(props) {
@@ -20,7 +20,6 @@ class ExerciseLab extends React.Component {
     this.setState(() => ({
       selectedGroup: selectedGroup
     }))
-    // console.log(`You selected, ${selectedGroup}`)
   }
 
   render() {
@@ -65,9 +64,9 @@ class ExerciseLab extends React.Component {
                 className="add-exercise"
                 type="submit"
                 onClick={() => {
-                  console.log('you click add.....')
-                  console.log('button: userId', this.props.userId)
-                  console.log('button: exercise.id', exercise.id)
+                  // console.log('you click add.....')
+                  // console.log('button: userId', this.props.userId)
+                  // console.log('button: exercise.id', exercise.id)
                   this.props.addExercise(this.props.userId, exercise.id)
                 }}
               >
@@ -92,7 +91,7 @@ const mapDispatch = dispatch => {
   return {
     loadExercises: () => dispatch(fetchExercises()),
     addExercise: (userId, exerciseId) =>
-      dispatch(createWorkout(userId, exerciseId))
+      dispatch(addToWorkout(userId, exerciseId))
   }
 }
 
