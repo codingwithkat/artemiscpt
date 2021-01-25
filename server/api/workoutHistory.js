@@ -33,3 +33,5 @@ router.get('/', async (req, res, next) => {
     console.log('Error in get workout history')
   }
 })
+
+//change get route to post
