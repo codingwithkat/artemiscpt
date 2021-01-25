@@ -42,7 +42,11 @@ class ExerciseLab extends React.Component {
         </h4>
         <div className="drop-down-container">
           <div>
-            <select id="muscleGroup" onChange={this.filterMuscleGroup}>
+            <select
+              className="select-type"
+              id="muscleGroup"
+              onChange={this.filterMuscleGroup}
+            >
               <option>All Exercises</option>
               <option>Upper Body</option>
               <option>Lower Body</option>
