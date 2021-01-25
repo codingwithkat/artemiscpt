@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchExercises} from '../store/exercises'
 import {addToWorkout} from '../store/workoutHistory'
-import {Button} from 'react-bootstrap'
+import {Button, Container, Row, Col} from 'react-bootstrap'
 
 class ExerciseLab extends React.Component {
   constructor(props) {
@@ -35,11 +35,11 @@ class ExerciseLab extends React.Component {
 
     return (
       <div>
-        <h1 className="library-header">Build Today's Workout</h1>
+        <h1 className="library-header">Personal Exercise Library</h1>
         <h4 className="library-info">
-          Select as many exercises to build yourself a personalized workout
-          plan!
+          Select your exercises and reach your goals! <span>🏋️‍♀️🏋🏿‍♀️</span>
         </h4>
+        <h5 className="library-info">Filter by Muscle Groups</h5>
         <div className="drop-down-container">
           <div>
             <select
@@ -54,31 +54,33 @@ class ExerciseLab extends React.Component {
             </select>
           </div>
         </div>
-        {displayedExercises.map(exercise => (
-          <div className="all-exercises-container" key={exercise.id}>
-            <ul className="all-exercises">
-              <li className="exercise-title">{exercise.name}</li>
-              <li>Muscle Group: {exercise.type}</li>
-              <li>Set(s): {exercise.sets}</li>
-              <li>Reps: {exercise.repetitions}</li>
-              <li>Video: {exercise.video}</li>
-              {/* <li><ReactPlayer url = {exercise.video} width = "470" height = "300" className = "embedded-video"/></li> */}
-              <br />
-              <Button
-                className="add-exercise"
-                type="submit"
-                onClick={() => {
-                  // console.log('you click add.....')
-                  // console.log('button: userId', this.props.userId)
-                  // console.log('button: exercise.id', exercise.id)
-                  this.props.addExercise(this.props.userId, exercise.id)
-                }}
-              >
-                Add to Daily Workout
-              </Button>
-            </ul>
-          </div>
-        ))}
+        <Container>
+          {displayedExercises.map(exercise => (
+            <div className="all-exercises-container" key={exercise.id}>
+              <ul className="all-exercises">
+                <li className="exercise-title">{exercise.name}</li>
+                <li>Muscle Group: {exercise.type}</li>
+                <li>Set(s): {exercise.sets}</li>
+                <li>Reps: {exercise.repetitions}</li>
+                <li>Video: {exercise.video}</li>
+                {/* <li><ReactPlayer url = {exercise.video} width = "470" height = "300" className = "embedded-video"/></li> */}
+                <br />
+                <Button
+                  className="add-exercise"
+                  type="submit"
+                  onClick={() => {
+                    // console.log('you click add.....')
+                    // console.log('button: userId', this.props.userId)
+                    // console.log('button: exercise.id', exercise.id)
+                    this.props.addExercise(this.props.userId, exercise.id)
+                  }}
+                >
+                  Add to Daily Workout
+                </Button>
+              </ul>
+            </div>
+          ))}
+        </Container>
       </div>
     )
   }
