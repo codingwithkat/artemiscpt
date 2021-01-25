@@ -2,22 +2,38 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchExercises, createWorkout} from '../store/exercises'
 import {Button} from 'react-bootstrap'
+// import ReactPlayer from "react-player";
 
 class ExerciseLab extends React.Component {
   constructor(props) {
     super(props)
-    // this.clickAddExercise = this.clickAddExercise.bind(this)
+    this.state = {
+      selectedGroup: 'All Exercises'
+    }
   }
-
-  // clickAddExercise(exercise) {
-  //   this.props.addExercise(this.props.userId, exercise.id)
-  //   // console.log('you clicked the exercise button', exercise.name)
-  // }
   async componentDidMount() {
     await this.props.loadExercises()
   }
 
+  filterMuscleGroup = () => {
+    let selectedGroup = document.getElementById('muscleGroup').value
+    this.setState(() => ({
+      selectedGroup: selectedGroup
+    }))
+    // console.log(`You selected, ${selectedGroup}`)
+  }
+
   render() {
+    let displayedExercises = this.props.exercises.filter(exercise => {
+      if (
+        this.state.selectedGroup === 'All Exercises' ||
+        exercise.type === this.state.selectedGroup
+      ) {
+        return true
+      }
+      return false
+    })
+
     return (
       <div>
         <h1 className="library-header">Build Today's Workout</h1>
@@ -25,14 +41,26 @@ class ExerciseLab extends React.Component {
           Select as many exercises to build yourself a personalized workout
           plan!
         </h4>
-        {this.props.exercises.map(exercise => (
+        <div className="drop-down-container">
+          <div>
+            <select id="muscleGroup" onChange={this.filterMuscleGroup}>
+              <option>All Exercises</option>
+              <option>Upper Body</option>
+              <option>Lower Body</option>
+              <option>Full Body</option>
+            </select>
+          </div>
+        </div>
+        {displayedExercises.map(exercise => (
           <div className="all-exercises-container" key={exercise.id}>
             <ul className="all-exercises">
-              <li>Exercise Name: {exercise.name}</li>
+              <li className="exercise-title">{exercise.name}</li>
               <li>Muscle Group: {exercise.type}</li>
               <li>Set(s): {exercise.sets}</li>
               <li>Reps: {exercise.repetitions}</li>
               <li>Video: {exercise.video}</li>
+              {/* <li><ReactPlayer url = {exercise.video} width = "470" height = "300" className = "embedded-video"/></li> */}
+              <br />
               <Button
                 className="add-exercise"
                 type="submit"
@@ -43,10 +71,8 @@ class ExerciseLab extends React.Component {
                   this.props.addExercise(this.props.userId, exercise.id)
                 }}
               >
-                Add
+                Add to Daily Workout
               </Button>
-              {/* <img src={exercise.video}
-                style={{width: '25%', margin: '20px 0'}}/> */}
             </ul>
           </div>
         ))}

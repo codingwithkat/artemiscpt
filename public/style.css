@@ -42,17 +42,55 @@ form div {
 
 .all-exercises {
   padding: 0;
-  padding-left: 10px;
   margin: 0px;
   list-style-type: none;
+  text-align: center;
 }
 
 .all-exercises-container {
-  width: 350px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
   background-color: gold;
   float: left;
   margin: 30px;
   padding: 5px;
   word-wrap: break-word;
+}
+
+/* video sizing */
+.embedded-video {
+  margin: 0;
+}
+
+.add-exercise {
+  background-color: #000000;
+}
+
+.add-exercise:hover {
+  background-color: grey;
+}
+
+.exercise-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
