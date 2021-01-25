@@ -3,7 +3,9 @@ const Exercises = require('./exercises')
 const WorkoutHistory = require('./workouthistory')
 
 User.hasMany(Exercises)
-// Exercises.belongsTo(User)
+WorkoutHistory.belongsTo(Exercises)
+WorkoutHistory.belongsTo(User)
+// User.hasOne(WorkoutHistory)
 
 module.exports = {
   User,
