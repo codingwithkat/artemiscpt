@@ -26,7 +26,7 @@ export const fetchToday = userId => ({
 export const fetchDailyHistory = userId => async dispatch => {
   try {
     console.log('who is the user?', userId)
-    const {data} = await axios.get('/api/workouthistory', {userId})
+    const {data} = await axios.post('/api/workouthistory/user', {userId})
     console.log('are we here?', data)
     // dispatch(fetchToday(data))
   } catch (error) {

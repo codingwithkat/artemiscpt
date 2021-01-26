@@ -52,6 +52,7 @@ class ExerciseLab extends React.Component {
               <option>Upper Body</option>
               <option>Lower Body</option>
               <option>Full Body</option>
+              <option>Core</option>
             </select>
           </div>
         </div>

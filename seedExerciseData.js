@@ -25,99 +25,99 @@ const exerciseData = [
   },
   {
     id: 4,
-    name: 'Eveline',
-    type: 'Lower Body',
-    sets: 2,
-    repetitions: 11,
-    video: 'http://dummyimage.com/140x115.bmp/ff4444/ffffff'
+    name: 'Tricep Dumbbell Extensions',
+    type: 'Upper Body',
+    sets: 3,
+    repetitions: 12,
+    video: 'https://www.youtube.com/watch?v=nRiJVZDpdL0'
   },
   {
     id: 5,
-    name: 'Hussein',
-    type: 'Full Body',
-    sets: 2,
-    repetitions: 8,
-    video: 'http://dummyimage.com/192x203.png/ff4444/ffffff'
+    name: 'Plank',
+    type: 'Core',
+    sets: 3,
+    repetitions: 30,
+    video: 'https://www.youtube.com/watch?v=B296mZDhrP4'
   },
   {
     id: 6,
-    name: 'Carroll',
-    type: 'Lower Body',
-    sets: 1,
-    repetitions: 15,
-    video: 'http://dummyimage.com/249x183.bmp/5fa2dd/ffffff'
+    name: 'Medicine Ball Slams',
+    type: 'Full Body',
+    sets: 2,
+    repetitions: 20,
+    video: 'https://www.youtube.com/watch?v=6vXHh-Lhb2o'
   },
   {
     id: 7,
-    name: 'Monique',
+    name: 'Lat Pull Downs',
     type: 'Upper Body',
     sets: 1,
     repetitions: 8,
-    video: 'http://dummyimage.com/191x112.jpg/cc0000/ffffff'
+    video: 'https://www.youtube.com/watch?v=4B2ayE9LfRE'
   },
   {
     id: 8,
-    name: 'Pedro',
-    type: 'Lower Body',
+    name: 'Jump Squats',
+    type: 'Full Body',
     sets: 1,
     repetitions: 12,
-    video: 'http://dummyimage.com/231x248.jpg/ff4444/ffffff'
+    video: 'https://www.youtube.com/watch?v=Azl5tkCzDcc'
   },
   {
     id: 9,
-    name: 'Christina',
-    type: 'Upper Body',
-    sets: 1,
-    repetitions: 13,
-    video: 'http://dummyimage.com/229x111.png/dddddd/000000'
+    name: 'Burpees',
+    type: 'Full Body',
+    sets: 3,
+    repetitions: 10,
+    video: 'https://www.youtube.com/watch?v=Vh8MlDdH-j8'
   },
   {
     id: 10,
-    name: 'Neall',
-    type: 'Lower Body',
-    sets: 1,
-    repetitions: 13,
-    video: 'http://dummyimage.com/220x175.bmp/5fa2dd/ffffff'
+    name: 'Russian Twist',
+    type: 'Core',
+    sets: 3,
+    repetitions: 25,
+    video: 'https://www.youtube.com/watch?v=GBNowwdWXJQ'
   },
   {
     id: 11,
-    name: 'Chase',
-    type: 'Full Body',
-    sets: 2,
-    repetitions: 10,
-    video: 'http://dummyimage.com/213x105.png/dddddd/000000'
+    name: 'Shoulder Press',
+    type: 'Upper Body',
+    sets: 3,
+    repetitions: 12,
+    video: 'https://www.youtube.com/watch?v=B-aVuyhvLHU'
   },
   {
     id: 12,
-    name: 'Liv',
-    type: 'Upper Body',
-    sets: 2,
-    repetitions: 9,
-    video: 'http://dummyimage.com/207x215.jpg/5fa2dd/ffffff'
+    name: 'Quad Extensions',
+    type: 'Lower Body',
+    sets: 3,
+    repetitions: 15,
+    video: 'https://www.youtube.com/watch?v=vRQpiTwUeyM'
   },
   {
     id: 13,
-    name: 'Misha',
+    name: 'Jumping Rope',
     type: 'Full Body',
-    sets: 1,
-    repetitions: 13,
-    video: 'http://dummyimage.com/198x208.png/cc0000/ffffff'
+    sets: 3,
+    repetitions: 25,
+    video: 'https://www.youtube.com/watch?v=oFHglPSoZ9A'
   },
   {
     id: 14,
-    name: 'Alexi',
-    type: 'Lower Body',
+    name: 'Walking Lunges',
+    type: 'Full Body',
     sets: 3,
-    repetitions: 11,
-    video: 'http://dummyimage.com/100x155.png/dddddd/000000'
+    repetitions: 12,
+    video: 'https://www.youtube.com/watch?v=TVOq_D-kIQY'
   },
   {
     id: 15,
-    name: 'Tammie',
+    name: 'Bicep Curls',
     type: 'Upper Body',
-    sets: 1,
-    repetitions: 11,
-    video: 'http://dummyimage.com/168x235.bmp/5fa2dd/ffffff'
+    sets: 3,
+    repetitions: 12,
+    video: 'https://www.youtube.com/watch?v=zdQOmPMGjOY'
   }
   // {
   //   id: 16,
