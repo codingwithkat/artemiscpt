@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {fetchExercises} from '../store/exercises'
 import {addToWorkout} from '../store/workoutHistory'
 import {Button, Container, Row, Col} from 'react-bootstrap'
+import ReactPlayer from 'react-player'
 
 class ExerciseLab extends React.Component {
   constructor(props) {
@@ -62,16 +63,20 @@ class ExerciseLab extends React.Component {
                 <li>Muscle Group: {exercise.type}</li>
                 <li>Set(s): {exercise.sets}</li>
                 <li>Reps: {exercise.repetitions}</li>
-                <li>Video: {exercise.video}</li>
-                {/* <li><ReactPlayer url = {exercise.video} width = "470" height = "300" className = "embedded-video"/></li> */}
+                <br />
+                <li>
+                  <ReactPlayer
+                    url={exercise.video}
+                    width="470"
+                    height="300"
+                    className="embedded-video"
+                  />
+                </li>
                 <br />
                 <Button
                   className="add-exercise"
                   type="submit"
                   onClick={() => {
-                    // console.log('you click add.....')
-                    // console.log('button: userId', this.props.userId)
-                    // console.log('button: exercise.id', exercise.id)
                     this.props.addExercise(this.props.userId, exercise.id)
                   }}
                 >
