@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
-  background-color: #d5f3fe;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #000000;
+  font-family: serif;
 }
 
 a {
@@ -9,7 +9,7 @@ a {
 }
 
 a:hover {
-  color: #d5f3fe;
+  color: #000000;
 }
 
 label {
@@ -19,11 +19,14 @@ label {
 nav a {
   display: inline-block;
   margin: 1em;
-  color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .nav-bar {
-  background-color: #0f5298;
+  background-color: #ffd700;
+  color: black;
 }
 
 form div {
@@ -31,24 +34,26 @@ form div {
   display: inline-block;
 }
 
-.brand-name {
+.brand-name.nav-bar {
   font-size: 24px;
+  color: black;
 }
 
 /* Exercise Library */
 
-.library-header {
+.library-header,
+.todays-plan {
   padding-top: 5px;
   text-align: center;
   font-style: italic;
-  font-size: 24px;
-  color: #2565ae;
+  font-size: 32px;
+  color: #ffd700;
 }
 
 .library-info {
   text-align: center;
   font-size: 18px;
-  color: #2565ae;
+  color: #ffd700;
 }
 
 .all-exercises {
@@ -61,9 +66,9 @@ form div {
 .all-exercises-container {
   width: 360px;
   height: 460px;
-  background-color: #0f5298;
-  color: aliceblue;
-  float: right;
+  background-color: #ffd700;
+  color: #000000;
+  float: left;
   /* margin: 30px; */
   display: block;
   padding: 50px;
@@ -79,8 +84,8 @@ form div {
 }
 
 .button-exercise {
-  color: #0f5298;
-  background-color: #d5f3fe;
+  color: #ffd700;
+  background-color: #000000;
 }
 
 .add-exercise:hover {
@@ -88,16 +93,17 @@ form div {
 }
 
 .exercise-title {
+  color: black;
   font-weight: bold;
   font-size: 20px;
 }
 
 .title {
-  color: #2565ae;
+  color: #ffffff;
   text-align: center;
 }
 .welcome-note {
-  color: #2565ae;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -118,22 +124,30 @@ select {
   display: block;
 }
 
-/* // Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+.login-button {
+  color: #000000;
+  background-color: #ffd700;
+  border: 1px solid #ffffff;
 }
 
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+.login-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #b96f6f;
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+.auth {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
 }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+.google {
+  color: #ffd700;
+  font-style: italic;
 }
 
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+.google:hover {
+  font-style: normal;
+  color: #ffffff;
 }

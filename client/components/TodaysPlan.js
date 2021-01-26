@@ -22,7 +22,7 @@ class TodaysPlan extends React.Component {
     const exerciseHist = this.props.exerciseHistory
     return (
       <div>
-        <h1>Time to start training...</h1>
+        <h1 className="todays-plan">Your Exercises:</h1>
         <Container>
           {exerciseHist.map(exercise => (
             <div className="all-exercises-container" key={exercise.id}>

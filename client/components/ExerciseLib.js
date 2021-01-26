@@ -38,7 +38,7 @@ class ExerciseLab extends React.Component {
       <div>
         <h1 className="library-header">Personal Exercise Library</h1>
         <h4 className="library-info">
-          Select your exercises and reach your goals! <span>🏋️‍♀️🏋🏿‍♀️</span>
+          Select your exercises and go to your daily workout!
         </h4>
         <h5 className="library-info">Filter by Muscle Groups</h5>
         <div className="drop-down-container">

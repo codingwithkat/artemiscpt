@@ -11,8 +11,6 @@ export const UserHome = props => {
 
   return (
     <div>
-      <h3>Welcome, {email}</h3>
-      <h3>Take a look at your exercise choices!</h3>
       <ExerciseLib component={ExerciseLib} />
     </div>
   )

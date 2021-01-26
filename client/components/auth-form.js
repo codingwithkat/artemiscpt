@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import {auth} from '../store'
+import {Button} from 'react-bootstrap'
 
 /**
  * COMPONENT
@@ -10,26 +11,30 @@ const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
-    <div>
+    <div className="auth">
       <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor="email">
-            <small>Email</small>
+            <h2 className="login">Email</h2>
           </label>
           <input name="email" type="text" />
         </div>
         <div>
           <label htmlFor="password">
-            <small>Password</small>
+            <h2 className="login">Password</h2>
           </label>
           <input name="password" type="password" />
         </div>
         <div>
-          <button type="submit">{displayName}</button>
+          <Button className="login-button" type="submit">
+            {displayName}
+          </Button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <a href="/auth/google">{displayName} with Google</a>
+      <a className="google" href="/auth/google">
+        {displayName} with Google
+      </a>
     </div>
   )
 }
