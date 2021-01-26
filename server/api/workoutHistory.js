@@ -54,3 +54,21 @@ function getToday() {
   }
   return year + '-' + month + '-' + day
 }
+
+//mount: /api/workouthistory/user
+router.delete('/user', async (req, res, next) => {
+  try {
+    let userId = req.body.userId
+    let exerciseId = req.body.exerciseId
+    console.log('user, exer', userId, exerciseId)
+    let completedWorkout = await WorkoutHistory.destroy({
+      where: {
+        userId: userId,
+        exerciseId: exerciseId
+      }
+    })
+    res.sendStatus(200)
+  } catch (error) {
+    console.log('Error in removing completed workout')
+  }
+})

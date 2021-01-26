@@ -18,19 +18,37 @@ export const addToWorkout = (userId, exerciseId) => async dispatch => {
 }
 const FETCH_TODAYS_HISTORY = 'FETCH_TODAYS_HISTORY'
 
-export const fetchToday = userId => ({
+export const fetchToday = (userId, exerciseHistory) => ({
   type: FETCH_TODAYS_HISTORY,
-  userId
+  userId,
+  exerciseHistory
 })
 
 export const fetchDailyHistory = userId => async dispatch => {
   try {
-    console.log('who is the user?', userId)
+    // console.log('who is the user?', userId)
     const {data} = await axios.post('/api/workouthistory/user', {userId})
-    console.log('are we here?', data)
-    // dispatch(fetchToday(data))
+    // console.log('are we here?', data)
+    dispatch(fetchToday(userId, data))
   } catch (error) {
     console.log("Cannot fetch today's workout!")
+  }
+}
+const COMPLETED_EXERCISE = 'COMPLETED_EXERCISE'
+
+export const completed = (userId, exerciseHistory) => ({
+  type: COMPLETED_EXERCISE,
+  userId,
+  exerciseHistory
+})
+
+export const completeExercise = (userId, exerciseId) => async dispatch => {
+  try {
+    await axios.delete('/api/workouthistory/user', {
+      data: {userId: userId, exerciseId: exerciseId}
+    })
+  } catch (error) {
+    console.log('Cannot fetch updated workout!')
   }
 }
 
@@ -41,14 +59,19 @@ const initialState = {
 }
 
 export default function historyReducer(state = initialState, action) {
-  console.log('inside history reducer')
   switch (action.type) {
     case ADD_EXERCISE: {
       return {...state, userId: action.userId, exerciseId: action.exerciseId}
     }
     case FETCH_TODAYS_HISTORY: {
-      console.log('what is action.exer', action.exerciseHistory)
-      return {...state, exerciseHistory: action.exerciseHistory}
+      return {
+        ...state,
+        userId: action.userId,
+        exerciseHistory: action.exerciseHistory
+      }
+    }
+    case COMPLETED_EXERCISE: {
+      return state
     }
     default:
       return state

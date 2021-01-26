@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchDailyHistory} from '../store/workoutHistory'
+import {fetchDailyHistory, completeExercise} from '../store/workoutHistory'
+import {Button, Container} from 'react-bootstrap'
+import ReactPlayer from 'react-player'
 
 class TodaysPlan extends React.Component {
   constructor(props) {
@@ -8,18 +10,54 @@ class TodaysPlan extends React.Component {
   }
 
   async componentDidMount() {
-    await this.props.loadWorkoutHistory(this.props.userId)
+    await this.props.loadWorkoutHistory(
+      this.props.userId,
+      this.props.exerciseHistory
+    )
   }
 
   render() {
     console.log('this.props', this.props)
-    console.log('exercises', this.props.exerciseHistory)
+    // console.log('exercises', this.props.exerciseHistory)
+    const exerciseHist = this.props.exerciseHistory
     return (
       <div>
         <h1>Time to start training...</h1>
-        {/* <ul>
-              <li>{}</li>
-          </ul> */}
+        <Container>
+          {exerciseHist.map(exercise => (
+            <div className="all-exercises-container" key={exercise.id}>
+              <ul className="all-exercises">
+                <li className="exercise-title">{exercise.name}</li>
+                <li>Muscle Group: {exercise.type}</li>
+                <li>Set(s): {exercise.sets}</li>
+                <li>Reps: {exercise.repetitions}</li>
+                <br />
+                <li>
+                  <ReactPlayer
+                    url={exercise.video}
+                    width="470"
+                    height="300"
+                    className="embedded-video"
+                  />
+                </li>
+                <br />
+                <Button
+                  className="button-exercise"
+                  type="submit"
+                  onClick={() => {
+                    this.props.completeExercise(this.props.userId, exercise.id)
+                    this.props.loadWorkoutHistory(
+                      this.props.userId,
+                      this.props.exerciseHistory
+                    )
+                  }}
+                >
+                  Completed!
+                </Button>
+              </ul>
+            </div>
+          ))}
+        </Container>
       </div>
     )
   }
@@ -35,7 +73,10 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    loadWorkoutHistory: userId => dispatch(fetchDailyHistory(userId))
+    loadWorkoutHistory: (userId, exerciseHistory) =>
+      dispatch(fetchDailyHistory(userId, exerciseHistory)),
+    completeExercise: (userId, exerciseId) =>
+      dispatch(completeExercise(userId, exerciseId))
   }
 }
 

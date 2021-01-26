@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchExercises} from '../store/exercises'
 import {addToWorkout} from '../store/workoutHistory'
-import {Button, Container, Row, Col} from 'react-bootstrap'
+import {Button, Container} from 'react-bootstrap'
 import ReactPlayer from 'react-player'
 
 class ExerciseLab extends React.Component {
@@ -75,7 +75,7 @@ class ExerciseLab extends React.Component {
                 </li>
                 <br />
                 <Button
-                  className="add-exercise"
+                  className="button-exercise"
                   type="submit"
                   onClick={() => {
                     this.props.addExercise(this.props.userId, exercise.id)
