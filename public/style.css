@@ -31,6 +31,10 @@ form div {
   display: inline-block;
 }
 
+.brand-name {
+  font-size: 24px;
+}
+
 /* Exercise Library */
 
 .library-header {
@@ -43,7 +47,7 @@ form div {
 
 .library-info {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   color: #2565ae;
 }
 
@@ -56,12 +60,17 @@ form div {
 
 .all-exercises-container {
   width: 360px;
-  height: 360px;
-  background-color: gold;
+  height: 460px;
+  background-color: #0f5298;
+  color: aliceblue;
   float: left;
-  margin: 30px;
-  padding: 5px;
+  /* margin: 30px; */
+  display: block;
+  padding: 50px;
+  margin-top: 20px;
+  margin-right: 10px;
   word-wrap: break-word;
+  border-radius: 7px;
 }
 
 /* video sizing */
@@ -70,7 +79,8 @@ form div {
 }
 
 .add-exercise {
-  background-color: #000000;
+  color: #0f5298;
+  background-color: #d5f3fe;
 }
 
 .add-exercise:hover {
