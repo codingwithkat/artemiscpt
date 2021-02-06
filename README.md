@@ -1,40 +1,6 @@
-## Setup
-
-get changes from now on by entering:
-
-```
-git fetch boilermaker
-git merge boilermaker/master
-```
-
 ## Customize
 
 * `npm install`
-* Create two postgres databases
-
-### OAuth
-
-* To use OAuth with Google, complete the steps above with a real client
-  ID and client secret supplied from Google
-  * You can get them from the [Google APIs dashboard][google-apis].
-
-[google-apis]: https://console.developers.google.com/apis/credentials
-
-## Linting
-
-Linters are fundamental to any project. They ensure that your code
-has a consistent style, which is critical to writing readable code.
-
-Boilermaker comes with a working linter (ESLint, with
-`eslint-config-fullstack`) "out of the box." However, everyone has
-their own style, so we recommend that you and your team work out yours
-and stick to it. Any linter rule that you object to can be "turned
-off" in `.eslintrc.json`. You may also choose an entirely different
-config if you don't like ours:
-
-* [Standard style guide](https://standardjs.com/)
-* [Airbnb style guide](https://github.com/airbnb/javascript)
-* [Google style guide](https://google.github.io/styleguide/jsguide.html)
 
 ## Start
 
