@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {fetchExercises} from '../store/exercises'
 import {addToWorkout} from '../store/workoutHistory'
 import {Button, Container} from 'react-bootstrap'
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 
 class ExerciseLab extends React.Component {
   constructor(props) {
