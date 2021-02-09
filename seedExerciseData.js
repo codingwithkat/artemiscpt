@@ -5,7 +5,7 @@ const exerciseData = [
     type: 'Lower Body',
     sets: 3,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=Xz5fUtv_NCA'
+    video: 'https://www.youtube.com/embed/v=Xz5fUtv_NCA'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 3,
     repetitions: 10,
-    video: 'https://www.youtube.com/watch?v=mN1IUo18HXs'
+    video: 'https://www.youtube.com/embed/v=mN1IUo18HXs'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const exerciseData = [
     type: 'Lower Body',
     sets: 3,
     repetitions: 15,
-    video: 'https://www.youtube.com/watch?v=Pt5ThtTfn_U'
+    video: 'https://www.youtube.com/embed/v=Pt5ThtTfn_U'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const exerciseData = [
     type: 'Upper Body',
     sets: 3,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=nRiJVZDpdL0'
+    video: 'https://www.youtube.com/embed/v=nRiJVZDpdL0'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const exerciseData = [
     type: 'Core',
     sets: 3,
     repetitions: 30,
-    video: 'https://www.youtube.com/watch?v=B296mZDhrP4'
+    video: 'https://www.youtube.com/embed/v=B296mZDhrP4'
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 2,
     repetitions: 20,
-    video: 'https://www.youtube.com/watch?v=6vXHh-Lhb2o'
+    video: 'https://www.youtube.com/embed/v=6vXHh-Lhb2o'
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const exerciseData = [
     type: 'Upper Body',
     sets: 1,
     repetitions: 8,
-    video: 'https://www.youtube.com/watch?v=4B2ayE9LfRE'
+    video: 'https://www.youtube.com/embed/v=4B2ayE9LfRE'
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 1,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=Azl5tkCzDcc'
+    video: 'https://www.youtube.com/embed/v=Azl5tkCzDcc'
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 3,
     repetitions: 10,
-    video: 'https://www.youtube.com/watch?v=Vh8MlDdH-j8'
+    video: 'https://www.youtube.com/embed/v=Vh8MlDdH-j8'
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const exerciseData = [
     type: 'Core',
     sets: 3,
     repetitions: 25,
-    video: 'https://www.youtube.com/watch?v=GBNowwdWXJQ'
+    video: 'https://www.youtube.com/embed/v=GBNowwdWXJQ'
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ const exerciseData = [
     type: 'Upper Body',
     sets: 3,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=B-aVuyhvLHU'
+    video: 'https://www.youtube.com/embed/v=B-aVuyhvLHU'
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ const exerciseData = [
     type: 'Lower Body',
     sets: 3,
     repetitions: 15,
-    video: 'https://www.youtube.com/watch?v=vRQpiTwUeyM'
+    video: 'https://www.youtube.com/embed/v=vRQpiTwUeyM'
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 3,
     repetitions: 25,
-    video: 'https://www.youtube.com/watch?v=oFHglPSoZ9A'
+    video: 'https://www.youtube.com/embed/v=oFHglPSoZ9A'
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ const exerciseData = [
     type: 'Full Body',
     sets: 3,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=TVOq_D-kIQY'
+    video: 'https://www.youtube.com/embed/v=TVOq_D-kIQY'
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ const exerciseData = [
     type: 'Upper Body',
     sets: 3,
     repetitions: 12,
-    video: 'https://www.youtube.com/watch?v=zdQOmPMGjOY'
+    video: 'https://www.youtube.com/embed/v=zdQOmPMGjOY'
   }
   // {
   //   id: 16,
