@@ -10,7 +10,6 @@ export const addExercise = (userId, exerciseId) => ({
 
 export const addToWorkout = (userId, exerciseId) => async dispatch => {
   try {
-    console.log('addToWorkout Thunk userId, exId:', userId, exerciseId)
     await axios.post('/api/workouthistory', {userId, exerciseId})
   } catch (error) {
     console.log('Error in addToWorkout!')
@@ -26,9 +25,7 @@ export const fetchToday = (userId, exerciseHistory) => ({
 
 export const fetchDailyHistory = userId => async dispatch => {
   try {
-    // console.log('who is the user?', userId)
     const {data} = await axios.post('/api/workouthistory/user', {userId})
-    // console.log('are we here?', data)
     dispatch(fetchToday(userId, data))
   } catch (error) {
     console.log("Cannot fetch today's workout!")

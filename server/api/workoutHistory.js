@@ -6,7 +6,6 @@ module.exports = router
 //mount: /api/workouthistory
 router.post('/', async (req, res, next) => {
   try {
-    console.log('req.body', req.body)
     let exerciseId = req.body.exerciseId
     let userId = req.body.userId
     const successfulAddition = await WorkoutHistory.create({
@@ -60,7 +59,6 @@ router.delete('/user', async (req, res, next) => {
   try {
     let userId = req.body.userId
     let exerciseId = req.body.exerciseId
-    console.log('user, exer', userId, exerciseId)
     let completedWorkout = await WorkoutHistory.destroy({
       where: {
         userId: userId,

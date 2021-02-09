@@ -5,10 +5,6 @@ import {Button, Container} from 'react-bootstrap'
 import ReactPlayer from 'react-player'
 
 class TodaysPlan extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   async componentDidMount() {
     await this.props.loadWorkoutHistory(
       this.props.userId,
@@ -17,8 +13,6 @@ class TodaysPlan extends React.Component {
   }
 
   render() {
-    console.log('this.props', this.props)
-    // console.log('exercises', this.props.exerciseHistory)
     const exerciseHist = this.props.exerciseHistory
     return (
       <div>
@@ -64,7 +58,6 @@ class TodaysPlan extends React.Component {
 }
 
 const mapState = state => {
-  console.log('state', state)
   return {
     userId: state.user.id,
     exerciseHistory: state.workoutHistory.exerciseHistory
