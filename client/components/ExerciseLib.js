@@ -65,14 +65,12 @@ class ExerciseLab extends React.Component {
                 <li>Set(s): {exercise.sets}</li>
                 <li>Reps: {exercise.repetitions}</li>
                 <br />
-                <li>
-                  <ReactPlayer
-                    url={exercise.video}
-                    width="470"
-                    height="300"
-                    className="embedded-video"
-                  />
-                </li>
+                <ReactPlayer
+                  url={exercise.video}
+                  width="400"
+                  height="300"
+                  className="embedded-video"
+                />
                 <br />
                 <Button
                   className="button-exercise"
