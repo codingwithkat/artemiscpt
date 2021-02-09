@@ -66,12 +66,13 @@ class ExerciseLab extends React.Component {
                 <li>Reps: {exercise.repetitions}</li>
                 <br />
                 <li>
-                  <ReactPlayer
+                  {/* <ReactPlayer
                     url={exercise.video}
                     width="470"
                     height="300"
                     className="embedded-video"
-                  />
+                  /> */}
+                  <iframe src={exercise.video} title="video" />
                 </li>
                 <br />
                 <Button
