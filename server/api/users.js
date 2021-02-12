@@ -15,7 +15,3 @@ router.get('/', async (req, res, next) => {
     next(err)
   }
 })
-
-//get route
-//post will create or update
-//delete route
