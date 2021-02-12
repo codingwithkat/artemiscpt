@@ -36,6 +36,12 @@ const NavigationBar = ({handleClick, isLoggedIn}) => (
                 <Link to="/signup" className="nav-links">
                   Sign Up
                 </Link>
+                <a href="https://github.com/codingwithkat">
+                  <i className="fab fa-github" />
+                </a>{' '}
+                <a href="https://www.linkedin.com/in/katerina-papaloukas-scoullos/">
+                  <i className="fab fa-linkedin" />
+                </a>
               </div>
             )}
           </nav>

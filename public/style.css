@@ -151,3 +151,20 @@ select {
   font-style: normal;
   color: #ffffff;
 }
+
+.SWE,
+.contact {
+  color: gold;
+}
+
+.contact:hover {
+  color: #ffffff;
+}
+
+.contact {
+  padding-left: 10px;
+}
+
+.navbar-toggler.collapsed {
+  color: #000000;
+}
